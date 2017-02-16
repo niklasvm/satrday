@@ -30,3 +30,26 @@ You can also embed plots, for example:
 ![](rmarkdown-rocks_files/figure-markdown_github/pressure-1.png)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+``` r
+library(tidyverse)
+```
+
+    ## Loading tidyverse: ggplot2
+    ## Loading tidyverse: tibble
+    ## Loading tidyverse: tidyr
+    ## Loading tidyverse: readr
+    ## Loading tidyverse: purrr
+    ## Loading tidyverse: dplyr
+
+    ## Conflicts with tidy packages ----------------------------------------------
+
+    ## filter(): dplyr, stats
+    ## lag():    dplyr, stats
+
+``` r
+ggplot(diamonds,aes(x=carat,y=price,col=cut))+
+  geom_point()
+```
+
+![](rmarkdown-rocks_files/figure-markdown_github/unnamed-chunk-1-1.png)
